@@ -81,7 +81,7 @@ title2|desc2|3|2025-02-11|false
 Принцип инкапсуляции строго соблюдается во всех классах проекта:  
 public class TaskManager {
     private List<Task> tasks;  // Внутренняя коллекция скрыта
-    ```java
+ ```java
 
     // Доступ к задачам только через контролируемые методы
     public void addTask(Task task) {
@@ -97,7 +97,7 @@ public class TaskManager {
     private void validateTask(Task task) { /* проверка данных */ }
     private void saveTasks() { /* сохранение в файл */ }
 }
-    ``` 
+``` 
 ### ПОЛИМОРФИЗМ
 Полиморфизм активно используется для гибкой обработки задач:
 ```java
