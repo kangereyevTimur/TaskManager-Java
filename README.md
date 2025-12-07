@@ -77,16 +77,90 @@ title2|desc2|3|2025-02-11|false
 Простое хранение, позволяющее без труда расширить до JSON или SQLite.  
 
 ### 7. Принципы ООП в деталях  
-✔ Инкапсуляция  
-Все поля закрыты, доступ только через геттеры/сеттеры.  
-✔ Полиморфизм  
-Используется для сортировок:  
-Comparator<Task> byPriority  
-Comparator<Task> byDeadline  
-✔ Абстракция  
-Чёткое выделение слоёв.  
-✔ Наследование  
-Модели подготовлены к расширению для PremiumUser или Admin.  
+### ИНКАПСУЛЯЦИЯ 
+Принцип инкапсуляции строго соблюдается во всех классах проекта:  
+public class TaskManager {
+    private List<Task> tasks;  // Внутренняя коллекция скрыта
+    
+    // Доступ к задачам только через контролируемые методы
+    public void addTask(Task task) {
+        validateTask(task);
+        tasks.add(task);
+        saveTasks();  // Автоматическое сохранение
+    }
+    
+    public List<Task> getAllTasks() {
+        return new ArrayList<>(tasks);  // Возвращаем копию, защищая оригинал
+    }
+    
+    private void validateTask(Task task) { /* проверка данных */ }
+    private void saveTasks() { /* сохранение в файл */ }
+}
+### ПОЛИМОРФИЗМ
+Полиморфизм активно используется для гибкой обработки задач:
+```
+// Разные кнопки - один интерфейс ActionListener
+JButton addButton = new JButton("Добавить");
+addButton.addActionListener(e -> showAddTaskDialog());  // Лямбда-реализация
+
+JButton deleteButton = new JButton("Удалить");
+deleteButton.addActionListener(e -> deleteSelectedTask());  // Другая реализация
+
+JButton completeButton = new JButton("Выполнено");
+completeButton.addActionListener(e -> markTaskAsCompleted());  // Третья реализация
+```
+### АБСТРАКЦИЯ 
+Проект построен на четком разделении абстракций по слоям:
+#### Слой Модели  
+```
+// Абстракция "Задача"
+public class Task {
+    // Только существенные атрибуты для доменной области
+    // Не включает детали GUI, сериализации или бизнес-логики
+}
+```  
+#### Слой Хранения  
+```  
+
+public class FileStorage {
+    // Абстракция "Хранилище данных"
+    public void saveTasks(List<Task> tasks) { /* абстракция сериализации */ }
+    public List<Task> loadTasks() { /* абстракция десериализации */ }
+    
+    // Скрывает: формат файла, кодировку, путь сохранения
+}
+```  
+### НАСЛЕДОВАНИЕ 
+// Кастомная модель таблицы, расширяющая стандартную
+public class TaskTableModel extends AbstractTableModel {
+    private List<Task> tasks;
+    private String[] columnNames = {"Название", "Приоритет", "Дедлайн", "Статус"};
+    
+    @Override
+    public int getRowCount() { return tasks.size(); }
+    
+    @Override
+    public int getColumnCount() { return columnNames.length; }
+    
+    @Override
+    public Object getValueAt(int row, int col) {
+        Task task = tasks.get(row);
+        switch (col) {
+            case 0: return task.getTitle();
+            case 1: return task.getPriority();
+            case 2: return task.getDeadline();
+            case 3: return task.isCompleted() ? "yes" : "no";
+            default: return "";
+        }
+    }
+    
+    @Override
+    public String getColumnName(int col) {
+        return columnNames[col];
+    }
+}
+
+Наследование применено там, где оно приносит архитектурную пользу:
 ### 8. Обработка исключений
 Используются:  
 try/catch  
