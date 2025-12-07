@@ -163,66 +163,62 @@ javac -d out $(find src -name "*.java")
 java -cp out ui.SwingApp  
 ### 12. Project Structure
 .
-├── README  
+├── README.md  
 ├── TaskManager.jar  
 ├── lib  
-│   ├── log4j-api-2.19.0.jar  
-│   └── log4j-core-2.19.0.jar  
+│   ├── log4j-api-2.19.0.jar  
+│   └── log4j-core-2.19.0.jar  
 ├── libs  
-│   ├── flatlaf.jar  
-│   ├── json-20230227.jar  
-│   └── log4j-1.2.17.jar  
+│   ├── flatlaf.jar  
+│   ├── json-20230227.jar  
+│   └── log4j-1.2.17.jar  
 ├── logs  
-│   └── app.log  
+│   └── app.log  
 ├── out  
-│   ├── exception  
-│   │   └── StorageException.class  
-│   ├── model  
-│   │   ├── BaseTask.class  
-│   │   ├── Task.class  
-│   │   └── User.class  
-│   ├── service  
-│   │   └── TaskManager.class  
-│   ├── storage  
-│   │   ├── FileStorage.class  
-│   │   └── UserStorage.class  
-│   ├── ui  
-│   │   └── SwingApp.class  
-│   └── utils  
-│       ├── Helper.class  
-│       └── LoggerUtil.class  
+│   ├── exception  
+│   │   └── StorageException.class  
+│   ├── model  
+│   │   ├── BaseTask.class  
+│   │   ├── Task.class  
+│   │   └── User.class  
+│   ├── service  
+│   │   └── TaskManager.class  
+│   ├── storage  
+│   │   ├── FileStorage.class  
+│   │   └── UserStorage.class  
+│   ├── ui  
+│   │   └── SwingApp.class  
+│   └── utils  
+│       ├── Helper.class  
+│       └── LoggerUtil.class  
 ├── resources  
-│   └── log4j2.xml  
+│   └── log4j2.xml  
 ├── src  
-│   ├── exception  
-│   │   └── StorageException.java  
-│   ├── model  
-│   │   ├── BaseTask.java  
-│   │   ├── Task$TaskInfo.class  
-│   │   ├── Task.class  
-│   │   ├── Task.java  
-│   │   └── User.java  
-│   ├── service  
-│   │   └── TaskManager.java  
-│   ├── storage  
-│   │   ├── FileStorage.java  
-│   │   ├── Storage.java:  
-│   │   └── UserStorage.java  
-│   ├── ui  
-│   │   └── SwingApp.java  
-│   ├── util  
-│   └── utils  
-│       ├── Helper.class  
-│       ├── Helper.java  
-│       └── LoggerUtil.java  
+│   ├── exception  
+│   │   └── StorageException.java  
+│   ├── model  
+│   │   ├── BaseTask.java  
+│   │   ├── Task.java  
+│   │   ├── Task$TaskInfo.class  
+│   │   └── User.java  
+│   ├── service  
+│   │   └── TaskManager.java  
+│   ├── storage  
+│   │   ├── FileStorage.java  
+│   │   ├── Storage.java  
+│   │   └── UserStorage.java  
+│   ├── ui  
+│   │   └── SwingApp.java  
+│   └── utils  
+│       ├── Helper.java  
+│       └── LoggerUtil.java  
 ├── tasks.json  
 ├── tasks.txt  
 ├── tasks_Timur.txt  
 ├── tasks_t.txt  
 ├── test  
 └── users.txt  
-     ├── course_paper.pdf  
-     └── diagrams/  
+
 🧪 13. Testing Results (Расширено)
 Проверено:
 15+ сценариев добавления задач
