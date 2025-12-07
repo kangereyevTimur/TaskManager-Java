@@ -115,6 +115,7 @@ tasks_username.txt:
 title|description|priority|deadline|completed  
 title2|desc2|3|2025-02-11|false  
 Простое хранение, позволяющее без труда расширить до JSON или SQLite.  
+
 ### 7. Принципы ООП в деталях  
 ✔ Инкапсуляция  
 Все поля закрыты, доступ только через геттеры/сеттеры.  
@@ -138,60 +139,30 @@ try/catch
 logs/app.log  
 Записываются:  
 вход пользователя ;регистрация ;создание задачи ;удаление ;ошибки ввода ;ошибки чтения файлов.  
-### 10. User Interface Description  
-UI построен на Swing + FlatLaf.  
-Основные элементы:  
-JTabbedPane  
-JTable  
-JButton  
-JOptionPane  
-JPanel  
-JScrollPane  
-Функциональные окна:  
-окно авторизации  
-окно регистрации  
-окно добавления новой задачи  
-### 11. Запуск приложения 
-Компиляция:  
-javac -d out $(find src -name "*.java")  
-Запуск:  
-java -cp out ui.SwingApp  
-### 12. Структура проекта
- .
- ├── README  
- ├── TaskManager.jar  
- ├── lib  
- │   ├── log4j-api-2.19.0.jar  
- │   └── log4j-core-2.19.0.jar  
- ├── libs  
- │   ├── flatlaf.jar  
- │   ├── json-20230227.jar  
- │   └── log4j-1.2.17.jar  
- ├── logs  
- │   └── app.log  
- ├── out  
- │├── exception  
- │├── model  
- │   ├── service  
- │   ├── storage  
- │   ├── ui  
- │   └── utils  
- ├── resources  
- │   └── log4j2.xml  
- ├── src  
- │   ├── exception  
- │   ├── model  
- │   ├── service  
- │   ├── storage  
- │   ├── ui 
- │   ├── util  
- │   └── utils  
- ├── tasks.json  
- ├── tasks.txt  
- ├── tasks_Timur.txt  
- ├── tasks_t.txt  
- ├── test  
- └── users.txt  
+## 11. Запуск приложения 
+Запуск приложения  
+
+### Требования:
+- Установленная Java 21 или выше
+- Терминал (macOS/Linux) или Command Prompt (Windows)
+
+### Инструкция по запуску:
+
+1. **Клонирование репозитория:**
+   ```
+   git clone https://github.com/KangereyevTimur/TaskManager-Java.git
+   cd TaskManager-Java
+Компиляция проекта:
+
+
+# На macOS/Linux
+```
+javac -cp "lib/all/*" -d out src/main/java/**/*.java
+```
+# На Windows
+```
+javac -cp "lib/all/*" -d out src/main/java/**/*.java
+```
 
 ### 13. Результаты тестирования
 Проверено: 
