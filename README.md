@@ -131,6 +131,9 @@ public class FileStorage {
 }
 ```  
 ### НАСЛЕДОВАНИЕ 
+Наследование применено там, где оно приносит архитектурную пользу:
+
+```  
 // Кастомная модель таблицы, расширяющая стандартную
 public class TaskTableModel extends AbstractTableModel {
     private List<Task> tasks;
@@ -159,8 +162,7 @@ public class TaskTableModel extends AbstractTableModel {
         return columnNames[col];
     }
 }
-
-Наследование применено там, где оно приносит архитектурную пользу:
+```  
 ### 8. Обработка исключений
 Используются:  
 try/catch  
