@@ -162,40 +162,43 @@ javac -d out $(find src -name "*.java")
 Запуск:  
 java -cp out ui.SwingApp  
 ### 12. Project Structure
-- README.md
-- TaskManager.jar
-- lib
-  - log4j-api-2.19.0.jar
-  - log4j-core-2.19.0.jar
-- libs
-  - flatlaf.jar
-  - json-20230227.jar
-  - log4j-1.2.17.jar
-- logs
-  - app.log
-- out
-  - exception/
-  - model/
-  - service/
-  - storage/
-  - ui/
-  - utils/
-- resources
-  - log4j2.xml
-- src
-  - exception/
-  - model/
-  - service/
-  - storage/
-  - ui/
-  - util/
-  - utils/
-- tasks.json
-- tasks.txt
-- tasks_Timur.txt
-- tasks_t.txt
-- test/
-- users.txt
+ .
+ ├── README  
+ ├── TaskManager.jar  
+ ├── lib  
+ │   ├── log4j-api-2.19.0.jar  
+ │   └── log4j-core-2.19.0.jar  
+ ├── libs  
+ │   ├── flatlaf.jar  
+ │   ├── json-20230227.jar  
+ │   └── log4j-1.2.17.jar  
+ ├── logs  
+ │   └── app.log  
+ ├── out  
+ │   ├── exception  
+ │   ├── model  
+ │   ├── service  
+ │   ├── storage  
+ │   ├── ui  
+ │   └── utils  
+ ├── resources  
+ │   └── log4j2.xml  
+ ├── src  
+ │   ├── exception  
+ │   ├── model  
+ │   ├── service  
+ │   ├── storage  
+ │   ├── ui 
+ │   ├── util  
+ │   └── utils  
+ ├── tasks.json  
+ ├── tasks.txt  
+ ├── tasks_Timur.txt  
+ ├── tasks_t.txt  
+ ├── test  
+ └── users.txt  
+
+
 
 
 🧪 13. Testing Results (Расширено)
