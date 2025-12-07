@@ -98,7 +98,7 @@ public class TaskManager {
 }
 ### ПОЛИМОРФИЗМ
 Полиморфизм активно используется для гибкой обработки задач:
-```
+```java
 // Разные кнопки - один интерфейс ActionListener
 JButton addButton = new JButton("Добавить");
 addButton.addActionListener(e -> showAddTaskDialog());  // Лямбда-реализация
