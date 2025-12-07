@@ -1,0 +1,35 @@
+# Compiled Java classes
+*.class
+
+# Libraries and packages
+*.jar
+*.war
+*.ear
+
+# Build directories
+out/
+bin/
+target/
+build/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# macOS system files
+.DS_Store
+
+# Application logs and data
+logs/
+*.log
+tasks.json
+tasks.txt
+tasks_*.txt
+users.txt
+
+# Generated files
+*.tmp
+*.cache

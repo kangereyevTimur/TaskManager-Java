@@ -1,0 +1,12 @@
+package storage;
+
+import model.Task;
+import java.util.List;
+
+/**
+ * Интерфейс слоя хранения задач.
+ */
+public interface Storage {
+    void saveTasks(List<Task> tasks) throws StorageException;
+    List<Task> loadTasks() throws StorageException;
+}
