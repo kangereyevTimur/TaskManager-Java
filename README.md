@@ -162,63 +162,41 @@ javac -d out $(find src -name "*.java")
 Запуск:  
 java -cp out ui.SwingApp  
 ### 12. Project Structure
-1. Используем блок кода с моноширинным шрифтом
-README.md
-TaskManager.jar
-lib/
-log4j-api-2.19.0.jar
-log4j-core-2.19.0.jar
-libs/
-flatlaf.jar
-json-20230227.jar
-log4j-1.2.17.jar
-logs/
-app.log
-out/
-exception/
-StorageException.class
-model/
-BaseTask.class
-Task.class
-User.class
-service/
-TaskManager.class
-storage/
-FileStorage.class
-UserStorage.class
-ui/
-SwingApp.class
-utils/
-Helper.class
-LoggerUtil.class
-resources/
-log4j2.xml
-src/
-exception/
-StorageException.java
-model/
-BaseTask.java
-Task.java
-Task$TaskInfo.class
-User.java
-service/
-TaskManager.java
-storage/
-FileStorage.java
-Storage.java
-UserStorage.java
-ui/
-SwingApp.java
-utils/
-Helper.java
-LoggerUtil.java
-tasks.json
-tasks.txt
-tasks_Timur.txt
-tasks_t.txt
-test/
-users.txt
-⚡ Почему так лучше:
+- README.md
+- TaskManager.jar
+- lib
+  - log4j-api-2.19.0.jar
+  - log4j-core-2.19.0.jar
+- libs
+  - flatlaf.jar
+  - json-20230227.jar
+  - log4j-1.2.17.jar
+- logs
+  - app.log
+- out
+  - exception/
+  - model/
+  - service/
+  - storage/
+  - ui/
+  - utils/
+- resources
+  - log4j2.xml
+- src
+  - exception/
+  - model/
+  - service/
+  - storage/
+  - ui/
+  - util/
+  - utils/
+- tasks.json
+- tasks.txt
+- tasks_Timur.txt
+- tasks_t.txt
+- test/
+- users.txt
+
 
 🧪 13. Testing Results (Расширено)
 Проверено:
