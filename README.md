@@ -175,8 +175,8 @@ java -cp out ui.SwingApp
  ├── logs  
  │   └── app.log  
  ├── out  
- │   ├── exception  
- │   ├── model  
+ │├── exception  
+ │├── model  
  │   ├── service  
  │   ├── storage  
  │   ├── ui  
