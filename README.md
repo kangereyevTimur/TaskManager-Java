@@ -9,7 +9,7 @@ Task Manager — это настольное Java-приложение для у
 обработка ошибок  
 поддержка нескольких пользователей  
 ####  Главное окно
-![Главное окно приложения](screenshots/1.jpg)
+![Главное окно приложения](screenshots/2.jpg)
 
 ### 2. Ключевые функции  
 #### **УПРАВЛЕНИЕ ЗАДАЧАМИ**
@@ -69,6 +69,8 @@ SwingApp → TaskManager
 TaskManager → Task  
 SwingApp → FileStorage  
 FileStorage → Task  
+###  UML-Схема
+![Схема](screenshots/3.jpg)
 
 
 ### 5. Формат хранения данных
